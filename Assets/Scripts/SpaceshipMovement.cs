@@ -14,9 +14,9 @@ public class SpaceshipMovement : MonoBehaviour
     [Tooltip("Ammount of thrust reduction if the ship is not accelerating")]
     [SerializeField, Range(0.001f, 0.999f)] private float _thrustReduction = 0.5f;
 
-    [SerializeField] private float _maxVelocity = 100f;
+    [SerializeField] private float _maxThrust = 100f;
 
-    private float _spaceshipVelocity;
+    private float _spaceshipThrust;
 
     private Rigidbody _rb;
 
@@ -27,7 +27,7 @@ public class SpaceshipMovement : MonoBehaviour
 
     private void Start()
     {
-        _spaceshipVelocity = 0f;
+        _spaceshipThrust = 0f;
         _rb = GetComponent<Rigidbody>();
         _rb.maxAngularVelocity = 1f;
         Cursor.lockState = CursorLockMode.Locked;
@@ -49,21 +49,18 @@ public class SpaceshipMovement : MonoBehaviour
         _rb.AddRelativeTorque(Vector3.up * Mathf.Clamp(_pitchYaw.x, -1f, 1f) * _yawTorque * Time.fixedDeltaTime);
 
         // Thrust
-        if(_thrust1D > 0.1f || _thrust1D < -0.1f)
+        if (_thrust1D > 0.1f || _thrust1D < -0.1f)
         {
-            _spaceshipVelocity = Mathf.Clamp(_spaceshipVelocity + _thrustForce * Time.fixedDeltaTime, 0f, _maxVelocity);
+            _spaceshipThrust = Mathf.Clamp(_spaceshipThrust + _thrustForce * Time.fixedDeltaTime, 0f, _maxThrust);
         }
         else
         {
-            _spaceshipVelocity -= _spaceshipVelocity * _thrustReduction * Time.fixedDeltaTime;
-            _spaceshipVelocity = Mathf.Clamp(_spaceshipVelocity, 0f, _maxVelocity);
+            _spaceshipThrust -= _spaceshipThrust * _thrustReduction * Time.fixedDeltaTime;
+            _spaceshipThrust = Mathf.Clamp(_spaceshipThrust, 0f, _maxThrust);
         }
 
-        _rb.velocity += transform.forward * _spaceshipVelocity * Time.fixedDeltaTime;
-        if(_rb.velocity.magnitude >= _maxVelocity)
-        {
-            _rb.velocity = _rb.velocity.normalized * _maxVelocity;
-        }
+        // Add thrust velocity to the spaceship
+        _rb.velocity += transform.forward * _spaceshipThrust * Time.fixedDeltaTime;
     }
 
     #region Public Methods
@@ -80,7 +77,7 @@ public class SpaceshipMovement : MonoBehaviour
 
     public float GetThrust()
     {
-        return _spaceshipVelocity;
+        return _spaceshipThrust;
     }
 
     #endregion

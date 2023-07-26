@@ -29,7 +29,7 @@ public class SpaceshipDebugHUD : MonoBehaviour
         Vector2 input = _spaceshipMovement.GetDirectionDelta();
         input.Normalize();
 
-        _innerRect.anchoredPosition = input * radius;
+        _innerRect.anchoredPosition = Vector2.Lerp(_innerRect.anchoredPosition, input * radius, 0.1f);
 
         _velocityText.text = "Velocity: " + _spaceshipMovement.GetVelocity().magnitude.ToString();
         _thrustText.text = "Thrust Velocity: " + _spaceshipMovement.GetThrust().ToString();
