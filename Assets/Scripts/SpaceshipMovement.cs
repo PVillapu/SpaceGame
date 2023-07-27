@@ -13,7 +13,7 @@ public class SpaceshipMovement : MonoBehaviour
     [SerializeField] private float _maxAngularVelocity = 1f;
 
     [Tooltip("Ammount of thrust reduction if the ship is not accelerating")]
-    [SerializeField, Range(0.001f, 0.999f)] private float _thrustReduction = 0.5f;
+    [SerializeField, Range(0.001f, 20f)] private float _thrustReduction = 0.5f;
     [SerializeField] private float _maxThrust = 100f;
 
     [SerializeField] GameObject _spaceshipGraphics;
