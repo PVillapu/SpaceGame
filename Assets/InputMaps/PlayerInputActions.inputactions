@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "Roll",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "61479985-4e2e-4600-9ec1-9eb1b6d9d5e4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PitchYaw",
@@ -68,6 +68,39 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "Roll",
+                    "id": "9d59e597-e14a-40b8-91f3-91b5665b3cdd",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Roll",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "63f29462-eaae-425a-89e8-ccda8aea506e",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "55727a19-d19c-4c43-9762-34f225d0b735",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "1c120f18-2377-4dee-bc1e-39de7ab4d5bc",
                     "path": "<Mouse>/delta",
@@ -80,11 +113,22 @@
                 },
                 {
                     "name": "",
-                    "id": "6e4d355f-e1d3-43bb-934a-9f244996db75",
-                    "path": "<Keyboard>/ctrl",
+                    "id": "5e19e667-f4bf-4428-aeb4-5164b1b2e238",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Controller",
+                    "action": "PitchYaw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2bd350e5-52e7-4223-8630-d45d2c86843a",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
                     "action": "Thrust",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -104,6 +148,17 @@
                 },
                 {
                     "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Controller",
+            "bindingGroup": "Controller",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }

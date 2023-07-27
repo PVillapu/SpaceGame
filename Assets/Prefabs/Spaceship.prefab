@@ -92,9 +92,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6031423601288806595}
-  - component: {fileID: 2832813184686727883}
   - component: {fileID: 2748315126689950738}
   - component: {fileID: 1694313871862389403}
+  - component: {fileID: 2832813184686727883}
   - component: {fileID: 8692233763943912993}
   m_Layer: 0
   m_Name: Spaceship
@@ -119,22 +119,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2832813184686727883
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4544465100796045870}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.6
-  m_AngularDrag: 0.6
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &2748315126689950738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,8 +135,11 @@ MonoBehaviour:
   _pitchTorque: 200
   _rollTorque: 200
   _thrustForce: 100
+  _maxAngularVelocity: 1
   _thrustReduction: 0.78
   _maxThrust: 50
+  _spaceshipGraphics: {fileID: 4826813044360304089}
+  _maxShipRollAngle: 45
 --- !u!114 &1694313871862389403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,10 +214,26 @@ MonoBehaviour:
     m_ActionId: fa176d12-f72c-464c-af2b-c734189ee13d
     m_ActionName: InGame/PitchYaw[/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: 
   m_DefaultActionMap: InGame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!54 &2832813184686727883
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4544465100796045870}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0.6
+  m_AngularDrag: 0.6
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!136 &8692233763943912993
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -354,7 +357,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.5
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
