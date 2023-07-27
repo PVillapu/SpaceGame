@@ -134,10 +134,10 @@ MonoBehaviour:
   _yawTorque: 200
   _pitchTorque: 200
   _rollTorque: 200
-  _thrustForce: 100
-  _maxAngularVelocity: 1
-  _thrustReduction: 0.78
-  _maxThrust: 50
+  _thrustForce: 150
+  _maxAngularVelocity: 1.5
+  _thrustReduction: 0.88
+  _maxThrust: 200
   _spaceshipGraphics: {fileID: 4826813044360304089}
   _maxShipRollAngle: 45
 --- !u!114 &1694313871862389403
@@ -213,8 +213,8 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fa176d12-f72c-464c-af2b-c734189ee13d
     m_ActionName: InGame/PitchYaw[/Mouse/delta]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Controller
   m_DefaultActionMap: InGame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -227,8 +227,8 @@ Rigidbody:
   m_GameObject: {fileID: 4544465100796045870}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0.6
-  m_AngularDrag: 0.6
+  m_Drag: 2.5
+  m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -328,7 +328,7 @@ TrailRenderer:
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
-  m_MotionVectors: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
@@ -357,7 +357,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.5
+  m_Time: 0.4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -414,8 +414,8 @@ TrailRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 2
+    numCapVertices: 2
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
@@ -468,7 +468,7 @@ TrailRenderer:
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
-  m_MotionVectors: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
@@ -497,7 +497,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -554,8 +554,8 @@ TrailRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 2
+    numCapVertices: 2
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
