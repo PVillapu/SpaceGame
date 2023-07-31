@@ -136,7 +136,7 @@ MonoBehaviour:
   _rollTorque: 200
   _thrustForce: 150
   _maxAngularVelocity: 1.5
-  _thrustReduction: 0.74
+  _thrustReduction: 0.9
   _maxThrust: 200
   _spaceshipGraphics: {fileID: 4826813044360304089}
   _maxShipRollAngle: 45
@@ -357,7 +357,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.3
+  m_Time: 0.15
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -387,8 +387,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.21226418, g: 0.8670057, b: 1, a: 0.6392157}
-      key1: {r: 0.17986828, g: 0.76744163, b: 0.8867924, a: 0.61960787}
+      key0: {r: 0.21226418, g: 0.8670057, b: 1, a: 1}
+      key1: {r: 0.17986828, g: 0.76744163, b: 0.8867924, a: 0.2901961}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -497,7 +497,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.3
+  m_Time: 0.15
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -527,8 +527,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.21226418, g: 0.8670057, b: 1, a: 0.6392157}
-      key1: {r: 0.17986828, g: 0.76744163, b: 0.8867924, a: 0.61960787}
+      key0: {r: 0.21226418, g: 0.8670057, b: 1, a: 1}
+      key1: {r: 0.17986828, g: 0.76744163, b: 0.8867924, a: 0.2901961}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
