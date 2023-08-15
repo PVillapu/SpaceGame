@@ -92,10 +92,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6031423601288806595}
-  - component: {fileID: 2748315126689950738}
-  - component: {fileID: 1694313871862389403}
   - component: {fileID: 2832813184686727883}
   - component: {fileID: 8692233763943912993}
+  - component: {fileID: 4797032991762338027}
+  - component: {fileID: 1583325104751529176}
   m_Layer: 0
   m_Name: Spaceship
   m_TagString: Untagged
@@ -119,105 +119,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2748315126689950738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4544465100796045870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 468aae68518c4d848971a785aeef30ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _yawTorque: 200
-  _pitchTorque: 200
-  _rollTorque: 200
-  _thrustForce: 150
-  _maxAngularVelocity: 1.5
-  _thrustReduction: 0.9
-  _maxThrust: 200
-  _spaceshipGraphics: {fileID: 4826813044360304089}
-  _maxShipRollAngle: 45
---- !u!114 &1694313871862389403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4544465100796045870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 31c0b0d1313784648a36a33d3930539a, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2748315126689950738}
-        m_TargetAssemblyTypeName: SpaceshipMovement, Assembly-CSharp
-        m_MethodName: OnThrust
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 2f2b5aa6-2897-4530-98d1-d181b8e1ff48
-    m_ActionName: InGame/Thrust[/Keyboard/s,/Keyboard/w]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2748315126689950738}
-        m_TargetAssemblyTypeName: SpaceshipMovement, Assembly-CSharp
-        m_MethodName: OnRoll
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 61479985-4e2e-4600-9ec1-9eb1b6d9d5e4
-    m_ActionName: InGame/Roll[/Keyboard/q,/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2748315126689950738}
-        m_TargetAssemblyTypeName: SpaceshipMovement, Assembly-CSharp
-        m_MethodName: OnPitchYaw
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: fa176d12-f72c-464c-af2b-c734189ee13d
-    m_ActionName: InGame/PitchYaw[/Mouse/delta]
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Controller
-  m_DefaultActionMap: InGame
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!54 &2832813184686727883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -248,6 +149,52 @@ CapsuleCollider:
   m_Height: 3.3850303
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.028333187}
+--- !u!114 &4797032991762338027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4544465100796045870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectInterest: 1
+  DefaultInterestGroups: []
+  DestroyWhenStateAuthorityLeaves: 0
+  AllowStateAuthorityOverride: 1
+  AoiPositionSource: {fileID: 0}
+  Flags: 2305
+  NetworkGuid:
+    RawGuidValue: 17be33e7ceb4b6544a56e487e44afa57
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 1583325104751529176}
+  SimulationBehaviours: []
+--- !u!114 &1583325104751529176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4544465100796045870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5675b94c83cf0408f5e7d4f7cdadb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  _yawTorque: 500
+  _pitchTorque: 1000
+  _rollTorque: 1000
+  _thrustForce: 100
+  _maxAngularVelocity: 1
+  _thrustReduction: 0.5
+  _maxThrust: 100
+  _spaceshipGraphics: {fileID: 4826813044360304089}
+  _maxShipRollAngle: 45
 --- !u!1 &4826813044360304089
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,8 @@ public class SpaceshipDebugHUD : MonoBehaviour
     [Header("Spaceship movement")]
     [SerializeField] private Image _innerImage;
     [SerializeField] private Image _outerImage;
-    [SerializeField] private SpaceshipMovement _spaceshipMovement;
+    //[SerializeField] private SpaceshipMovement _spaceshipMovement;
+    //[SerializeField] private PlayerInputManager _playerInputManager;
     [SerializeField] private TextMeshProUGUI _velocityText;
     [SerializeField] private TextMeshProUGUI _thrustText;
     
@@ -24,14 +25,14 @@ public class SpaceshipDebugHUD : MonoBehaviour
 
     private void Update()
     {
-        if (_spaceshipMovement == null) return;
+        //if (_spaceshipMovement == null) return;
 
-        Vector2 input = _spaceshipMovement.GetDirectionDelta();
-        input.Normalize();
+        //Vector2 input = _playerInputManager.GetPitchYawValue();
+        //input.Normalize();
 
-        _innerRect.anchoredPosition = Vector2.Lerp(_innerRect.anchoredPosition, input * radius, 0.1f);
+        //_innerRect.anchoredPosition = Vector2.Lerp(_innerRect.anchoredPosition, input * radius, 0.1f);
 
-        _velocityText.text = "Velocity: " + _spaceshipMovement.GetVelocity().magnitude.ToString();
-        _thrustText.text = "Thrust Velocity: " + _spaceshipMovement.GetThrust().ToString();
+        //_velocityText.text = "Velocity: " + _spaceshipMovement.GetVelocity().magnitude.ToString();
+        //_thrustText.text = "Thrust Velocity: " + _spaceshipMovement.GetThrust().ToString();
     }
 }

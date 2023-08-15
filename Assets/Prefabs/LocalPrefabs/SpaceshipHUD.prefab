@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 9133685835098606077}
   - component: {fileID: 181440232439239440}
   - component: {fileID: 7945125145532277549}
-  - component: {fileID: 1752913709189901166}
+  - component: {fileID: 3785033252271679799}
   m_Layer: 5
   m_Name: SpaceshipHUD
   m_TagString: Untagged
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1752913709189901166
+--- !u!114 &3785033252271679799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -459,12 +459,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6384360499091928503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7f490058861434dbb6a91aae370a8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8189bd78f68032a4d85e43888e018ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _innerImage: {fileID: 5983270694016754179}
   _outerImage: {fileID: 1936340422038056872}
-  _spaceshipMovement: {fileID: 0}
   _velocityText: {fileID: 8667089538509967327}
   _thrustText: {fileID: 6360214731373267563}
 --- !u!1 &7981540111403372452
